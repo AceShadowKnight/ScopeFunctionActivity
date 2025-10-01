@@ -67,9 +67,9 @@ class MainActivity : AppCompatActivity() {
     private fun averageLessThanMedian(listOfNumbers: List<Double>) : Boolean = listOfNumbers.sorted().let{
         l ->
             val median = if(l.size %2 == 0)
-                l((l.size -1)/ 2)) /2
+                (l[l.size/ 2] + l[(l.size -1) / 2]) / 2
             else
-                l(l.size/2)
+                l[l.size/2]
         listOfNumbers.average() < median
     }
 
